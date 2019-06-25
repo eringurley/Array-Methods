@@ -6,10 +6,6 @@ function map(array, callback) {
   }
   return newArray;
 }
-let array = [1, 2, 3];
-console.log(map(array, numbers => numbers * numbers));
-
-module.exports = { map };
 
 //filtered array
 function filter(array, callback) {
@@ -29,9 +25,5 @@ function find(array, callback) {
   }
   return -1;
 }
-// It returns a number
-// 2. Iterate over array if the item is good, return index
-// 3. Else, continue
-// 4. Return -1 if no matches found
 
 module.exports = { map, filter, find };
