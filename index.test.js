@@ -1,4 +1,4 @@
-const { map, filter, find } = require('./index');
+const { map, filter, find, reduce } = require('./index');
 
 //describe map
 describe('map array method function test', () => {
@@ -61,4 +61,15 @@ it('returns -1 if no match', () => {
   const index = find(colors, color => color == 'red');
   expect(index).toEqual(-1);
 });
+
+//describe reduce
+describe('reduce function', () => {
+  it('iterate through an array and invokes the callback', () =>  {
+    const numbers = [1, 2, 3]; 
+    const callback = jest.fn();
+    reduce(numbers, callback);
+    expect(callback).toHaveBeenCalled(numbers.length);
+  });
+
+  
 
