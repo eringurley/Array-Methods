@@ -1,5 +1,4 @@
-// Takes an Array and callback of signature item => {} and creates 
-// a new Array with the return value of each called callback.
+//mapped array
 function map(array, callback) {
   let newArray = [];
   for(var i = 0; i < array.length;i++) {
@@ -11,3 +10,17 @@ let array = [1, 2, 3];
 console.log(map(array, numbers => numbers * numbers));
 
 module.exports = { map };
+
+//filtered array
+function filter(array, callback) {
+  const filtered = [];
+  for(var i = 0; i < array.length; i++) {
+    if(callback(array[i])) {
+      filtered[filtered.length] = array[i];
+    }
+  }
+  return filtered;
+
+}
+
+module.exports = { map, filter };
