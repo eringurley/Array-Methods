@@ -19,9 +19,9 @@ function filter(array, callback) {
 }
 
 //findIndex
-function find(array, callback) {
-  for(let i = 0; i < array.length; i ++) {
-    if(callback(array[i])) return i; 
+function find(arr, callback) {
+  for(let i = 0; i < arr.length; i++) {
+    if(callback(arr[i])) return i;
   }
   return -1;
 }
@@ -29,7 +29,12 @@ function find(array, callback) {
 //reduce
 function reduce(array, callback, initialValue) {
   let acc = initialValue;
-  for(let i = 0; i < array.length; i ++) {
+  let i = 0;
+  if(initialValue === undefined) {
+    acc = array[0];
+    i = 1;
+  }
+  for(i; i < array.length; i ++) {
     acc = callback(acc, array[i]); 
   }
   return acc;
