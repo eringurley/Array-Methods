@@ -77,5 +77,13 @@ describe('reduce function', () => {
     expect(sum).toEqual(6);
   });
 
+  it('iterates through an array and sets updates the acc with result of callback when no initial value', () => {
+    const numbers = [1, 2, 3];
+
+    const sum = reduce(numbers, (acc, item) => acc + item, 0);
+
+    expect(sum).toEqual(6);
+  });
+
 });
 
