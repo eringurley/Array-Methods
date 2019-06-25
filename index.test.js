@@ -71,5 +71,10 @@ describe('reduce function', () => {
     expect(callback).toHaveBeenCalled(numbers.length);
   });
 
-  
+  it('iterates through an array and updated the acc with result of callback', () =>  {
+    const numbers = [1, 2, 3]; 
+    const sum = reduce(numbers, (acc, item) => acc + item, 0);
+    expect(sum).toEqual(6);
+  });
+});
 
