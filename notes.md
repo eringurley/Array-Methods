@@ -19,3 +19,8 @@ When we've returned an array, we are done.
 2. Iterate over array if the item is good, return index
 3. Else, continue
 4. Return -1 if no matches found
+
+##Reduce
+1. Iterates through every item and invokes the `callback`
+2. With an `initialValue` iterate throught the array and set the `accumulator` to the result of `callback`
+3. Without an `initialValue` the `acc` starts off as the first item in array
