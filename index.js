@@ -28,9 +28,11 @@ function find(array, callback) {
 
 //reduce
 function reduce(array, callback, initialValue) {
+  let acc = initialValue;
   for(let i = 0; i < array.length; i ++) {
-    callback(); 
+    acc = callback(acc, array[i]); 
   }
+  return acc;
 }
 
 module.exports = { map, filter, find, reduce };
