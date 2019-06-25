@@ -26,4 +26,11 @@ function find(array, callback) {
   return -1;
 }
 
-module.exports = { map, filter, find };
+//reduce
+function reduce(array, callback, initialValue) {
+  for(let i = 0; i < array.length; i ++) {
+    callback(); 
+  }
+}
+
+module.exports = { map, filter, find, reduce };
