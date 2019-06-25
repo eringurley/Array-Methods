@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eringurley/Array-Methods.git"
+    "url": "git+https://github.com/alchemy-fullstack-js-summer-2019/array-methods.git"
   },
   "keywords": [],
   "author": "",
