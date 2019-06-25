@@ -57,18 +57,18 @@ it('returns the index of a matching item', () => {
 });
 
 it('returns -1 if no match', () => {
-  const colors = ['blue', 'red', 'green'];
-  const index = find(colors, color => color == 'red');
+  const colors = ['red', 'blue', 'green'];
+  const index = find(colors, color => color.includes('z'));
   expect(index).toEqual(-1);
 });
 
 //describe reduce
 describe('reduce function', () => {
-  it('iterate through an array and invokes the callback', () =>  {
+  it('iterates through an array and invokes the callback', () =>  {
     const numbers = [1, 2, 3]; 
     const callback = jest.fn();
-    reduce(numbers, callback);
-    expect(callback).toHaveBeenCalled(numbers.length);
+    reduce(numbers, callback, 0);
+    expect(callback).toHaveBeenCalledTimes(numbers.length);
   });
 
   it('iterates through an array and updated the acc with result of callback', () =>  {
@@ -76,5 +76,6 @@ describe('reduce function', () => {
     const sum = reduce(numbers, (acc, item) => acc + item, 0);
     expect(sum).toEqual(6);
   });
+
 });
 
