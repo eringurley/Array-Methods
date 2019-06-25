@@ -62,10 +62,3 @@ it('returns -1 if no match', () => {
   expect(index).toEqual(-1);
 });
 
-
-// It returns a number
-// 2. Iterate over array if the item is good, return index
-// 3. Else, continue
-// 4. Return -1 if no matches found
-
-
