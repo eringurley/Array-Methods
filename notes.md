@@ -24,3 +24,5 @@ When we've returned an array, we are done.
 1. Iterates through every item and invokes the `callback`
 2. With an `initialValue` iterate throught the array and set the `accumulator` to the result of `callback`
 3. Without an `initialValue` the `acc` starts off as the first item in array
+
+##reduce without an initial value
